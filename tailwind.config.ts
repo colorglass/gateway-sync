@@ -52,6 +52,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// IoT specific colors
+				status: {
+					online: 'hsl(var(--status-online))',
+					offline: 'hsl(var(--status-offline))',
+					warning: 'hsl(var(--status-warning))'
+				},
+				sensor: {
+					primary: 'hsl(var(--sensor-primary))',
+					secondary: 'hsl(var(--sensor-secondary))'
+				},
+				'data-flow': 'hsl(var(--data-flow))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
