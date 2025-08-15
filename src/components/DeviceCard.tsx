@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { StatusIndicator } from "./StatusIndicator";
 import { Router, Settings, Activity, Wifi } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface DeviceCardProps {
   device: {
@@ -20,6 +21,7 @@ interface DeviceCardProps {
 }
 
 export function DeviceCard({ device, onConfigure, onMonitor }: DeviceCardProps) {
+  const navigate = useNavigate();
   return (
     <Card className="hover:shadow-lg transition-all duration-200 border-border bg-card">
       <CardHeader className="pb-3">
@@ -82,7 +84,7 @@ export function DeviceCard({ device, onConfigure, onMonitor }: DeviceCardProps) 
             variant="outline" 
             size="sm" 
             className="flex-1"
-            onClick={() => onConfigure?.(device.id)}
+            onClick={() => navigate(`/devices/${device.id}/config`)}
           >
             <Settings className="w-4 h-4 mr-1" />
             配置

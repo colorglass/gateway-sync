@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppSidebar } from "./components/AppSidebar";
 import Index from "./pages/Index";
 import DevicesPage from "./pages/DevicesPage";
+import DeviceConfigPage from "./pages/DeviceConfigPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/devices" element={<DevicesPage />} />
+                  <Route path="/devices/:deviceId/config" element={<DeviceConfigPage />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
